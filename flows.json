@@ -50,5 +50,60 @@
                 "30d50d52e06a1807"
             ]
         ]
+    },
+    {
+        "id": "55dd0376.f7c64c",
+        "type": "http in",
+        "z": "3af82246.3634ae",
+        "name": "",
+        "url": "/hello",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 440,
+        "y": 400,
+        "wires": [
+            [
+                "c656aba7.944288"
+            ]
+        ]
+    },
+    {
+        "id": "c2380ca8.0463",
+        "type": "http response",
+        "z": "3af82246.3634ae",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 780,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "c656aba7.944288",
+        "type": "change",
+        "z": "3af82246.3634ae",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"text\":\"Hello\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "c2380ca8.0463"
+            ]
+        ]
     }
 ]
