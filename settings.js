@@ -234,11 +234,11 @@ module.exports = {
     // provided here will enable file-based context that flushes to disk every 30 seconds.
     // Refer to the documentation for further options: https://nodered.org/docs/api/context/
     //
-    //contextStorage: {
-    //    default: {
-    //        module:"localfilesystem"
-    //    },
-    //},
+    contextStorage: {
+        default: {
+            module:"localfilesystem"
+        },
+    },
 
     // The following property can be used to order the categories in the editor
     // palette. If a node's category is not in the list, the category will get
@@ -272,5 +272,12 @@ module.exports = {
             // To enable the Projects feature, set this value to true
             enabled: false
         }
-    }
+    },
+    /** The working directory to handle relative file paths from within the File nodes
+     * defaults to the working directory of the Node-RED process.
+     */
+    //fileWorkingDirectory: "",
+
+    /** Allow the Function node to load additional npm modules directly */
+    functionExternalModules: true,
 };
